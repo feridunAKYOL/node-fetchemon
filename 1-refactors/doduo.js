@@ -50,10 +50,11 @@ log((new Date()).toLocaleString());
 
 const URL = 'https://pokeapi.co/api/v2/pokemon/84';
 
-
-log('fetching ' + URL + ' ...');
-nodeFetch(URL)
-  .then(res => {
+(async () => {
+  try{
+    log('fetching ' + URL + ' ...');
+    const dotDotDot = setInterval(() => log('...'), 100);
+    const res = await nodeFetch(URL);
     clearInterval(dotDotDot);
 
     log('testing response ...');
@@ -61,9 +62,8 @@ nodeFetch(URL)
     assert.strictEqual(res.status, 200);
 
     log('parsing response ...');
-    return res.json()
-  })
-  .then(data => {
+    const data = await res.json();
+
     log('testing data ...');
     assert.strictEqual(data.name, 'doduo');
     assert.strictEqual(data.weight, 392);
@@ -73,9 +73,10 @@ nodeFetch(URL)
     });
 
     log('... PASS!');
-  })
-  .catch(err => log(err.stack));
+  }catch (err) {
+    log(err.stack);
+  };
+})();
 
 
-const dotDotDot = setInterval(() => log('...'), 100);
 
