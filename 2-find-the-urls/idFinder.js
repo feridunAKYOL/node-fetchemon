@@ -39,7 +39,7 @@ const nodeFetch = require('node-fetch');
 // }
 //................................
 
-for (let a = 1; a < 40; a++) {
+for (let a = 1; a < 19; a++) {
 	nodeFetch(`https://pokeapi.co/api/v2/type/${a}`)
 		.then((res) => res.json())
 		.then((data) => {
