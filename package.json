@@ -1,7 +1,7 @@
 {
-  "name": "node-fetchemon",
+  "name": "fetchemon",
   "version": "1.0.0",
-  "description": "",
+  "description": "There is more than one way to make API request from Node.js, you'll be learning `node-fetch` so you can directly transfer everything you learned about API calls in the Browser.",
   "main": "index.js",
   "directories": {
     "example": "examples"
@@ -9,9 +9,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "feridun",
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feridunAKYOL/node-fetchemon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feridunAKYOL/node-fetchemon/issues"
+  },
+  "homepage": "https://github.com/feridunAKYOL/node-fetchemon#readme"
 }
